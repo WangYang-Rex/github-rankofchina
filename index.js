@@ -90,7 +90,8 @@ async function getGithubRankByPage(page){
 	return list;
 }
 
-async function getGithubRank(){
+async function getGithubRank() {
+	console.log('posturl: ' + posturl)
 	var total = 1;
 
 	var start = Date.now();
@@ -109,12 +110,17 @@ async function getGithubRank(){
 	var dirname = "rocdatas/"+dateExtract[0]+"/"+dateExtract[1];
 	mkdirsSync(dirname);
 
-	if(posturl)await axios.post(posturl,{
-		record_date:getTodayFormat(),
-		total_users:total_count,
-		rank_list:allList
-	});
+	if (posturl) {
+		console.log('posturl start')
+		await axios.post(posturl, {
+			record_date:getTodayFormat(),
+			total_users:total_count,
+			rank_list:allList
+		});
+		console.log('posturl finish')
+	}
 
+	console.log('fs write start')
 	fs.writeFileSync(dirname+"/"+dateExtract[2]+".json",JSON.stringify(allList));
 }
 
