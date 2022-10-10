@@ -91,7 +91,7 @@ async function getGithubRankByPage(page){
 }
 
 async function getGithubRank() {
-	console.log('posturl: ' + posturl + 1)
+	console.log('posturl: ' + posturl + '1')
 	var total = 1;
 
 	var start = Date.now();
