@@ -2,7 +2,7 @@
 
 > 通过Github Action每天会自动搜索 Github 中 Location 字段里包含 China 的前1000名用户，并生成json数据文件。
 
-![poster](README.assets/poster.jpg)
+<!-- ![poster](README.assets/poster.jpg) -->
 
 
 
