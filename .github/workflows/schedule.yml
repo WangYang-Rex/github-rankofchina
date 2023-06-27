@@ -8,8 +8,8 @@ on:
   #push:
   #  branches: [ main ]
   schedule:
-#    - cron: '1 0 * * *'  # 每天
-    - cron: '0 0 * * 1-5' # week day # https://crontab.guru/every-weekday
+    - cron: '1 0 * * *'  # 每天
+  #  - cron: '0 0 * * 1-5' # week day # https://crontab.guru/every-weekday
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
